@@ -43,7 +43,9 @@ textarea {
     resize: vertical;
 }
 
-
+button {
+    @include on-focus();
+}
 
 body {
     background-color: $primaryColor;
