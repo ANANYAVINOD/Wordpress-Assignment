@@ -1,0 +1,561 @@
+/**
+*Set up a decent box model on the root element
+*/
+html {
+  box-sizing: border-box;
+}
+
+/**
+    * Make all elements from the DOM inherit from the parent box sizing
+    * Since * has a specificity of 0, it does not override the html value
+    * making all elements inheriting from the root box-sizing value
+    */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+    * Basic styles for links
+    */
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  color: #665C70;
+  text-decoration: underline;
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+textarea {
+  resize: vertical;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/**
+   * Clear inner floats
+*/
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/**
+   * Hide text while making it readable for screen readers
+   * Needed in Webkit-based browsers because of an implementation bug
+*/
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+   * Hide element while making it readable for screen readers
+   * Shamelessly borrowed from HTML5Boilerplate
+*/
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+body {
+  font-family: inherit;
+  line-height: 1.5;
+  color: #665C70;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 0;
+}
+
+p {
+  color: #665C70;
+}
+
+html, body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-wrap {
+  margin-top: 30px;
+  padding: 20px 0px;
+  background-color: #000000;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.banner {
+  background-image: url("../images/hero-bg1.jpg");
+  background-size: cover;
+  position: relative;
+  height: 700px;
+}
+
+.top-sec {
+  padding-top: 15px;
+}
+
+.header-text {
+  color: #ffffff;
+}
+
+.logo-sec h1 {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.logo-sec a {
+  text-decoration: none;
+}
+
+.menu-list li {
+  list-style-type: none;
+  padding: 0 12px;
+}
+
+.menu-list li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.menu-list li a:hover {
+  color: -webkit-link;
+  text-decoration: underline;
+}
+
+.banner-content {
+  padding: 20px 100px 0 200px;
+  width: 55%;
+}
+
+.banner-content h2,
+.banner-content p {
+  color: #ffffff;
+}
+
+.banner-content h2 {
+  font-size: 54px;
+}
+
+.banner-content p {
+  font-size: 22px;
+}
+
+.primary-button {
+  padding: 20px 30px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.icon-bar a {
+  padding: 0 10px;
+}
+
+.fa-twitter {
+  color: #83c9e0;
+}
+
+.fa-facebook-f,
+.fa-linkedin-in {
+  color: #1d5cad;
+}
+
+.fa-youtube {
+  color: red;
+}
+
+.fa-bullseye {
+  color: #ffffff;
+  font-size: 35px;
+  padding: 10px 10px 0 0;
+}
+
+.sidebar {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 30px;
+  right: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 10px 20px 20px;
+  font-weight: bold;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  border: none;
+}
+
+.openbtn {
+  background-color: transparent;
+  border: none;
+}
+
+/*****************MEDIA QUERIES******************/
+@media (min-width: 1300px) {
+  .menu-hamburger {
+    display: none;
+  }
+}
+@media (max-width: 1300px) {
+  .menu-bar {
+    display: none;
+  }
+
+  .menu-hamburger {
+    display: block;
+  }
+
+  .banner-content {
+    padding: 20px 50px 0 100px;
+    width: 70%;
+  }
+}
+@media (max-width: 820px) {
+  .banner-content {
+    padding: 20px 50px 0 100px;
+    width: 100%;
+  }
+
+  .banner-content h2 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 576px) {
+  .banner-content {
+    padding: 20px 50px 0 50px;
+  }
+
+  .banner {
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
+.footer {
+  background-color: #000000;
+  padding: 50px 0;
+}
+
+.footer p {
+  color: #ffffff;
+}
+
+.contents-list {
+  color: #ffffff;
+  width: 25%;
+  font-size: 18px;
+}
+
+.contents-list .flex-box {
+  justify-content: left;
+}
+
+.contents-list li {
+  padding: 10px;
+}
+
+.footer-contents li {
+  list-style-type: none;
+}
+
+.footer-contents {
+  padding: 0;
+}
+
+.about-sec {
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.footer-sec-one {
+  padding: 30px 0;
+  border-bottom: 1px solid #665C70;
+}
+
+/*****************MEDIA QUERIES******************/
+@media (max-width: 1000px) {
+  .footer-sec-one .flex-box {
+    flex-direction: column;
+  }
+
+  .contents-list .flex-box {
+    flex-direction: row;
+  }
+
+  .contents-list ul {
+    padding: 0;
+  }
+
+  .contents-list {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+.section-one {
+  background-color: #F7F9FC;
+  padding: 70px 0;
+}
+
+.icon-list-one i {
+  font-size: 50px;
+}
+
+.fa-building {
+  color: #52489C;
+}
+
+.fa-chart-pie {
+  color: #F0686A;
+}
+
+.fa-lightbulb {
+  color: #54C5B6;
+}
+
+.list-one {
+  padding: 10px 50px 10px 50px;
+}
+
+.section-one h3 {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.section-two {
+  padding: 60px 0;
+}
+
+.section-two h4 {
+  text-align: center;
+  color: #665C70;
+}
+
+.client-logo-bar li {
+  list-style-type: none;
+  text-align: center;
+}
+
+.section-three {
+  padding: 70px 0;
+  background-color: #F7F9FC;
+}
+
+.section-three h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.block-top-sec {
+  padding-bottom: 60px;
+}
+
+.block {
+  background-color: #ffffff;
+  padding: 40px 50px 40px 50px;
+  margin: 0 20px 0 0;
+  text-align: center;
+}
+
+.client-name {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.client-position {
+  color: #89A5F9;
+}
+
+.section-four {
+  background-image: linear-gradient(to right, #4383F4, #8E60DE);
+  padding: 50px 0;
+}
+
+.section-four p {
+  color: #ffffff;
+}
+
+.section-four-list li {
+  list-style-type: none;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.list-four h3 {
+  font-size: 34px;
+  color: #ffffff;
+}
+
+.section-five h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.section-five {
+  padding: 50px 0;
+  border-bottom: 1px solid #F7F7F7;
+}
+
+.posts-list li {
+  list-style-type: none;
+  border: 1px solid #F7F7F7;
+}
+
+.posts-block {
+  margin: 60px 0;
+}
+
+.posts-list {
+  padding: 0;
+}
+
+.top-block-one {
+  background-color: #3791FC;
+  text-align: center;
+  height: 300px;
+}
+
+.top-block-one i {
+  font-size: 34px;
+  color: #5BD0B6;
+  padding: 130px 0;
+}
+
+.top-block-two {
+  background-color: #5BD0B6;
+  text-align: center;
+  height: 300px;
+}
+
+.top-block-two i {
+  font-size: 34px;
+  color: #FADD8D;
+  padding: 130px 0;
+}
+
+.top-block-three {
+  background-color: #93B1F9;
+  text-align: center;
+  height: 300px;
+}
+
+.top-block-three i {
+  font-size: 34px;
+  color: #0A3387;
+  padding: 130px 0;
+}
+
+.post-inner {
+  padding: 15px;
+}
+
+.post-text-one p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 40px;
+}
+
+.post h4 {
+  color: #665C70;
+}
+
+.section-six {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.section-six h2 {
+  font-size: 42px;
+}
+
+.email-input,
+.email-button {
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid lightgray;
+}
+
+.email-button {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/*****************MEDIA QUERIES******************/
+@media (max-width: 1300px) {
+  .section-one .flex-box,
+.section-two .flex-box,
+.section-three .flex-box,
+.section-four .flex-box,
+.section-five .flex-box {
+    flex-direction: column;
+  }
+
+  .post {
+    margin-bottom: 30px;
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

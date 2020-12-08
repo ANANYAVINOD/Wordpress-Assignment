@@ -1,0 +1,193 @@
+html,body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-wrap{
+    margin-top: 30px;
+    padding: 20px 0px;
+    background-color: $secondaryColor;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.banner {
+    background-image: url("../images/hero-bg1.jpg");
+    background-size: cover;
+    position: relative;
+    height: 700px;
+}
+
+.top-sec {
+    padding-top: 15px;
+}
+
+.header-text {
+    color: $primaryColor;
+}
+
+.logo-sec h1 {
+    font-size: 36px;
+    color: $primaryColor;
+}
+
+.logo-sec a {
+    text-decoration: none;
+}
+
+.menu-list li {
+    list-style-type: none;
+    padding: 0 12px;
+}
+
+.menu-list li a {
+    color: $primaryColor;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-list li a:hover {
+    color: -webkit-link;
+    text-decoration: underline;
+}
+
+.banner-content {
+    padding: 20px 100px 0 200px;
+    width: 55%;
+}
+
+.banner-content h2 , 
+.banner-content p {
+    color: $primaryColor;
+}
+
+.banner-content h2 {
+    font-size: 54px;
+}
+
+.banner-content p {
+    font-size: 22px;
+}
+
+.primary-button {
+    padding: 20px 30px;
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.icon-bar a {
+    padding: 0 10px;
+}
+
+.fa-twitter {
+    color: $iconColor1;
+}
+
+.fa-facebook-f,
+.fa-linkedin-in {
+    color: $iconColor2;
+}
+
+.fa-youtube {
+    color: $iconColor3;
+}
+
+.fa-bullseye {
+    color: $primaryColor;
+    font-size: 35px;
+    padding: 10px 10px 0 0;
+}
+
+.sidebar {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    right:0;
+    background-color: $secondaryColor;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 10px 20px 20px;
+    font-weight: bold;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    border: none;
+}
+
+.openbtn {
+    background-color: transparent;
+    border: none;
+}
+  
+/*****************MEDIA QUERIES******************/
+
+@media (min-width: 1300px) {   
+    .menu-hamburger {
+        display: none;
+    }
+}
+
+@media (max-width: 1300px) {
+    .menu-bar {
+        display: none;
+    }
+
+    .menu-hamburger {
+        display: block;
+    }
+
+    .banner-content {
+        padding: 20px 50px 0 100px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 820px) {
+    .banner-content {
+        padding: 20px 50px 0 100px;
+        width: 100%;
+    }
+
+    .banner-content h2 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-content {
+        padding: 20px 50px 0 50px;
+    }
+
+    .banner {
+        height: auto;
+        padding-bottom: 30px;
+    }
+}
+
+
+
+

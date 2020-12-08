@@ -1,0 +1,209 @@
+.section-one {
+    background-color: #F7F9FC;
+    padding: 70px 0 ;
+}
+
+.icon-list-one i {
+    font-size: 50px;
+}
+
+.fa-building {
+    color: $buildingiconColor;
+}
+
+.fa-chart-pie {
+    color: $charticonColor;
+}
+
+.fa-lightbulb {
+    color: $bulbiconColor;
+}
+
+.list-one {
+    padding: 10px 50px 10px 50px;
+}
+
+.section-one h3 {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.section-two {
+    padding: 60px 0;
+}
+
+.section-two h4 {
+    text-align: center;
+    color: $textColor;
+}
+
+.client-logo-bar li {
+    list-style-type: none;
+    text-align: center;
+}
+
+.section-three {
+    padding: 70px 0;
+    background-color:  $backgroundColor;
+}
+
+.section-three h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.block-top-sec {
+    padding-bottom: 60px;
+}
+
+.block {
+    background-color: $primaryColor;
+    padding: 40px 50px 40px 50px;
+    margin: 0 20px 0 0;
+    text-align: center;
+}
+
+.client-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.client-position {
+    color: #89A5F9;
+}
+
+.section-four {
+    background-image: linear-gradient(to right, #4383F4 , #8E60DE);
+    padding: 50px 0;
+}
+
+.section-four p {
+    color: $primaryColor;
+}
+
+.section-four-list li {
+    list-style-type: none;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.list-four h3 {
+    font-size: 34px;
+    color: $primaryColor;
+}
+
+.section-five h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.section-five {
+    padding: 50px 0;
+    border-bottom: 1px solid $borderColor;
+}
+
+.posts-list li {
+    list-style-type: none;
+    border: 1px solid $borderColor;
+}
+
+.posts-block {
+    margin: 60px 0;
+}
+
+.posts-list {
+    padding: 0;
+}
+
+.top-block-one {
+    background-color: $blockbgColor1;
+    text-align: center;
+    height: 300px;
+}
+
+.top-block-one i {
+    font-size: 34px;
+    color: #5BD0B6;
+    padding: 130px 0;
+}
+
+.top-block-two {
+    background-color: $blockbgColor2;
+    text-align: center;
+    height: 300px;
+}
+
+.top-block-two i {
+    font-size: 34px;
+    color: #FADD8D;
+    padding: 130px 0;
+}
+
+.top-block-three {
+    background-color: $blockbgColor3;
+    text-align: center;
+    height: 300px;
+}
+
+.top-block-three i {
+    font-size: 34px;
+    color: #0A3387;
+    padding: 130px 0;
+}
+
+.post-inner {
+    padding: 15px;
+}
+
+.post-text-one p {
+    font-size: 20px;
+    font-weight: bold;
+    color: $secondaryColor;
+    margin-top: 40px;
+}
+
+.post h4 {
+    color: $textColor;
+}
+
+.section-six {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.section-six h2 {
+    font-size: 42px;
+}
+
+.email-input,
+.email-button {
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid lightgray;
+}
+
+.email-button {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
+/*****************MEDIA QUERIES******************/
+
+@media (max-width: 1300px) {
+    .section-one .flex-box,
+    .section-two .flex-box,
+    .section-three .flex-box,
+    .section-four .flex-box,
+    .section-five .flex-box {
+        flex-direction: column;
+    }
+
+    .post {
+        margin-bottom: 30px;
+        width: 75%;
+        margin: 0 auto;
+    }
+}
