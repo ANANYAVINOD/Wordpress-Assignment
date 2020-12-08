@@ -36,6 +36,12 @@ textarea {
   resize: vertical;
 }
 
+button:focus {
+  outline-width: 1px;
+  outline-style: dotted;
+  outline-color: inherit;
+}
+
 body {
   background-color: #ffffff;
 }
@@ -247,6 +253,7 @@ html, body {
 .openbtn {
   background-color: transparent;
   border: none;
+  margin-top: 15px;
 }
 
 /*****************MEDIA QUERIES******************/
@@ -433,6 +440,7 @@ html, body {
 
 .section-four p {
   color: #ffffff;
+  font-size: 20px;
 }
 
 .section-four-list li {
@@ -442,7 +450,7 @@ html, body {
 }
 
 .list-four h3 {
-  font-size: 34px;
+  font-size: 44px;
   color: #ffffff;
 }
 
@@ -555,6 +563,10 @@ html, body {
     margin-bottom: 30px;
     width: 75%;
     margin: 0 auto;
+  }
+
+  .block {
+    margin: 20px 0;
   }
 }
 

@@ -82,6 +82,7 @@
 
 .section-four p {
     color: $primaryColor;
+    font-size: 20px;
 }
 
 .section-four-list li {
@@ -91,7 +92,7 @@
 }
 
 .list-four h3 {
-    font-size: 34px;
+    font-size: 44px;
     color: $primaryColor;
 }
 
@@ -205,5 +206,9 @@
         margin-bottom: 30px;
         width: 75%;
         margin: 0 auto;
+    }
+
+    .block {
+        margin: 20px 0;
     }
 }
