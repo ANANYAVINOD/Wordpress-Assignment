@@ -1,6 +1,15 @@
 .section-one {
     background-color: #F7F9FC;
-    padding: 70px 0 ;
+    padding: 70px 0;
+    h3 {
+        font-size: 22px;
+        margin-top: 20px;  
+    }
+    .flex-box {
+        @include respond-below(lg) {
+            flex-direction: column;
+        }
+    }
 }
 
 .icon-list-one i {
@@ -23,18 +32,17 @@
     padding: 10px 50px 10px 50px;
 }
 
-.section-one h3 {
-    font-size: 22px;
-    margin-top: 20px;
-}
-
 .section-two {
     padding: 60px 0;
-}
-
-.section-two h4 {
-    text-align: center;
-    color: $textColor;
+    h4 {
+        text-align: center;
+        color: $textColor;
+    }
+    .flex-box {
+        @include respond-below(lg) {
+            flex-direction: column;
+        }
+    }
 }
 
 .client-logo-bar li {
@@ -45,12 +53,16 @@
 .section-three {
     padding: 70px 0;
     background-color:  $backgroundColor;
-}
-
-.section-three h3 {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 22px;
+    h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 22px; 
+    }
+    .flex-box {
+        @include respond-below(lg) {
+            flex-direction: column;
+        }
+    }
 }
 
 .block-top-sec {
@@ -78,11 +90,15 @@
 .section-four {
     background-image: linear-gradient(to right, #4383F4 , #8E60DE);
     padding: 50px 0;
-}
-
-.section-four p {
-    color: $primaryColor;
-    font-size: 20px;
+    p {
+        color: $primaryColor;
+        font-size: 20px; 
+    }
+    .flex-box {
+        @include respond-below(lg) {
+            flex-direction: column;
+        }
+    }
 }
 
 .section-four-list li {
@@ -96,19 +112,26 @@
     color: $primaryColor;
 }
 
-.section-five h3 {
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
 .section-five {
     padding: 50px 0;
     border-bottom: 1px solid $borderColor;
+    h3 {
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    .flex-box {
+        @include respond-below(lg) {
+            flex-direction: column;
+        }
+    }
 }
 
-.posts-list li {
-    list-style-type: none;
-    border: 1px solid $borderColor;
+.post {
+    @include respond-below(lg) {
+        margin-bottom: 30px;
+        width: 75%;
+        margin: 0 auto;
+    }       
 }
 
 .posts-block {
@@ -117,42 +140,49 @@
 
 .posts-list {
     padding: 0;
+    li {
+        list-style-type: none;
+        border: 1px solid $borderColor;  
+    }
+}
+
+.block {
+    @include respond-below(lg) {
+        margin: 20px 0;
+    }
 }
 
 .top-block-one {
     background-color: $blockbgColor1;
     text-align: center;
     height: 300px;
-}
-
-.top-block-one i {
-    font-size: 34px;
-    color: #5BD0B6;
-    padding: 130px 0;
+    i {
+        font-size: 34px;
+        color: #5BD0B6;
+        padding: 130px 0; 
+    }
 }
 
 .top-block-two {
     background-color: $blockbgColor2;
     text-align: center;
     height: 300px;
-}
-
-.top-block-two i {
-    font-size: 34px;
-    color: #FADD8D;
-    padding: 130px 0;
+    i {
+        font-size: 34px;
+        color: #FADD8D;
+        padding: 130px 0; 
+    }
 }
 
 .top-block-three {
     background-color: $blockbgColor3;
     text-align: center;
     height: 300px;
-}
-
-.top-block-three i {
-    font-size: 34px;
-    color: #0A3387;
-    padding: 130px 0;
+    i {
+        font-size: 34px;
+        color: #0A3387;
+        padding: 130px 0;
+    }
 }
 
 .post-inner {
@@ -173,10 +203,9 @@
 .section-six {
     text-align: center;
     padding: 50px 0;
-}
-
-.section-six h2 {
-    font-size: 42px;
+    h2 {
+        font-size: 42px;
+    }
 }
 
 .email-input,
@@ -189,26 +218,4 @@
 .email-button {
     background-color: $secondaryColor;
     color: $primaryColor;
-}
-
-/*****************MEDIA QUERIES******************/
-
-@media (max-width: 1300px) {
-    .section-one .flex-box,
-    .section-two .flex-box,
-    .section-three .flex-box,
-    .section-four .flex-box,
-    .section-five .flex-box {
-        flex-direction: column;
-    }
-
-    .post {
-        margin-bottom: 30px;
-        width: 75%;
-        margin: 0 auto;
-    }
-
-    .block {
-        margin: 20px 0;
-    }
 }

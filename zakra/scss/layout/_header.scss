@@ -26,6 +26,10 @@ html,body {
     background-size: cover;
     position: relative;
     height: 700px;
+    @include respond-below(xl) {
+        height: auto;
+        padding-bottom: 30px;
+    } 
 }
 
 .top-sec {
@@ -39,44 +43,65 @@ html,body {
 .logo-sec h1 {
     font-size: 36px;
     color: $primaryColor;
+    a {
+        text-decoration: none;
+    }
 }
 
-.logo-sec a {
-    text-decoration: none;
+.menu-hamburger {
+    @include respond-above(lg) {
+        display: none;
+    } 
+    @include respond-below(lg) {
+        display: block;
+    }    
+}
+
+.menu-bar {
+    @include respond-below(lg) {
+        display: none;
+    }     
 }
 
 .menu-list li {
     list-style-type: none;
     padding: 0 12px;
-}
-
-.menu-list li a {
-    color: $primaryColor;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.menu-list li a:hover {
-    color: -webkit-link;
-    text-decoration: underline;
+    li a {
+        color: $primaryColor;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    li a:hover {
+        color: -webkit-link;
+        text-decoration: underline;
+    }
 }
 
 .banner-content {
     padding: 20px 100px 0 200px;
     width: 55%;
-}
-
-.banner-content h2 , 
-.banner-content p {
-    color: $primaryColor;
-}
-
-.banner-content h2 {
-    font-size: 54px;
-}
-
-.banner-content p {
-    font-size: 22px;
+    @include respond-between(lg,xl) {
+        width: 65%;
+    }
+    @include respond-below(lg){
+        padding: 20px 50px 0 100px;
+        width: 70%;
+    } 
+    @include respond-below(md) {
+        padding: 20px 50px 0 50px;
+        width: 100%;
+    }
+    h2 {
+        color: $primaryColor;
+        font-size: 54px;
+        @include respond-below(xl){
+            font-size: 45px; 
+        }
+    }
+    p {
+        color: $primaryColor;
+        font-size: 22px;  
+    }
 }
 
 .primary-button {
@@ -121,21 +146,19 @@ html,body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-}
-
-.sidebar a {
-    padding: 8px 10px 20px 20px;
-    font-weight: bold;
-    display: block;
-    transition: 0.3s;
-}
-  
-.sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 25px;
-    border: none;
+    a {
+        padding: 8px 10px 20px 20px;
+        font-weight: bold;
+        display: block;
+        transition: 0.3s;  
+    }
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 25px;
+        border: none;
+    }
 }
 
 .openbtn {
@@ -143,52 +166,4 @@ html,body {
     border: none;
     margin-top: 15px;
 }
-  
-/*****************MEDIA QUERIES******************/
-
-@media (min-width: 1300px) {   
-    .menu-hamburger {
-        display: none;
-    }
-}
-
-@media (max-width: 1300px) {
-    .menu-bar {
-        display: none;
-    }
-
-    .menu-hamburger {
-        display: block;
-    }
-
-    .banner-content {
-        padding: 20px 50px 0 100px;
-        width: 70%;
-    }
-}
-
-@media (max-width: 820px) {
-    .banner-content {
-        padding: 20px 50px 0 100px;
-        width: 100%;
-    }
-
-    .banner-content h2 {
-        font-size: 45px;
-    }
-}
-
-@media (max-width: 576px) {
-    .banner-content {
-        padding: 20px 50px 0 50px;
-    }
-
-    .banner {
-        height: auto;
-        padding-bottom: 30px;
-    }
-}
-
-
-
 
